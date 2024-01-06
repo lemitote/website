@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      padding-top: 50px; /* Ensure content doesn't get hidden behind the fixed header */
+    }
+
+    header {
+      background: url('cover.png') center/cover; /* Add your background image URL here */
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    section {
+      padding: 20px;
+      margin-top: 60px; /* Adjust margin to account for the fixed header */
+    }
+
+    img {
+      max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+      height: auto; /* Maintain the aspect ratio of the image */
+      display: block; /* Remove any default inline styling */
+      margin: 0 auto; /* Center the image within its container */
+      float: right; /* Float the image to the right */
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Podcast Le Mitotè</h1>
+  </header>
+
+  <section>
+    <h2>se retrouver dans le brouillard</h2>
+    <h2>Patreon: https://www.patreon.com/user?u=112789642</h2>
+    <h3>YouTube: https://www.youtube.com/channel/UCGil0JB8hkclqJvF2bGUVcQ </h3>
+    <img src="cloudy.png" alt="Description of the image">
+    <!-- Add more content as needed -->
+  </section>
+
+
+  <script>
+    window.onscroll = function() {
+      // Get the header
+      var header = document.querySelector("header");
+
+      // Get the offset position of the header
+      var sticky = header.offsetTop;
+
+      // Add the "sticky" class to the header when you reach its scroll position
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    };
+
+  </script>
+</body>
+</html>
